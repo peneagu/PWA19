@@ -12,7 +12,6 @@ const initdb = async () =>
     },
   });
 
-// Logic method that accepts some content and adds it to the database
 export const putDb = async (content) => {
   console.error('Text added to the database');
 
@@ -24,7 +23,6 @@ export const putDb = async (content) => {
   console.log('Texsed saved to the database', result);
 };
 
-// Logic for a method that gets all the content from the database
 export const getDb = async () => {
   console.error('Getting from the database');
   const jateDb = await openDB('jate', 1);
@@ -36,5 +34,4 @@ export const getDb = async () => {
   return result?.value;
 };
 
-// Starts the database
 initdb();
